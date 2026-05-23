@@ -1,0 +1,5 @@
+Developed a deep learning framework for detecting and localizing lytic lesions in musculoskeletal X-ray images using a hybrid Inception-ResNet-v2 + Swin Transformer architecture. The project focused on combining convolutional neural network-based feature extraction with transformer-based attention mechanisms to improve medical image understanding.
+
+In this framework, X-ray images were preprocessed and resized to 299 × 299 grayscale inputs, while lesion annotations were extracted from JSON/COCO-style bounding box files. The notebook builds train, validation, and test datasets with bounding box labels, showing 60 training images, 30 validation images, and 10 test images.
+
+The model uses Inception-ResNet-v2 to extract rich spatial and semantic features from X-ray images. These features are then passed into a Swin Transformer module, where local window-based self-attention and shifted-window mechanisms help capture contextual relationships across image regions. The notebook explains that Swin Transformer reduces the high computational cost of global self-attention by computing attention inside local windows while still allowing cross-window information exchange.
